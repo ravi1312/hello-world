@@ -4,7 +4,7 @@ pipeline {
   agent any
   parameters {
     //gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
-    listGitBranches(parameterType: 'BRANCH', credentialId: 'testing-git', repositoryUrl: 'https://github.com/ravi1312/hello-world.git', name: 'branch')
+    listGitBranches(parameterType: 'BRANCH', credentialsId: 'testing-git', remoteURL: 'https://github.com/ravi1312/hello-world.git', name: 'branch')
   }
   stages {
     stage('Example') {
