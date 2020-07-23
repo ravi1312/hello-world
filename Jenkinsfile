@@ -1,4 +1,4 @@
-Pipeline: Branch type - Basic usage (Declarative Pipeline)
+//Pipeline: Branch type - Basic usage (Declarative Pipeline)
 // Using git without checkout 
 pipeline {
   agent any
