@@ -8,7 +8,7 @@ pipeline {
         load "$WORKSPACE/values.groovy"
         echo "${env.Git_URL_API}"
         echo "${env.Git_Token}"
-        echo 'sh "git push https://${env.Git_Token}@${env.Git_URL_API}"'
+        sh "git push https://${env.Git_Token}@${env.Git_URL_API}"
       }
     }
   }
