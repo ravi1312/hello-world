@@ -6,7 +6,7 @@ pipeline {
     stage('Example') {
       steps {
         load "$WORKSPACE/values.groovy"
-        echo "${env.Git_URL}"
+        echo "${env.Git_URL_API}"
         echo "${env.Git_Token}"
       }
     }
