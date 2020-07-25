@@ -11,7 +11,7 @@ pipeline {
         sh " >$WORKSPACE/values.groovy"
         sh "touch $WORKSPACE/values.groovy"
         sh "ls $WORKSPACE/values.groovy"
-        sh "echo 'env.giturl=\"${params.Git_URL}\" >> $WORKSPACE/values.groovy'"
+        sh "echo 'env.giturl=\"${params.Git_URL}\"' >> $WORKSPACE/values.groovy"
         sh "cat $WORKSPACE/values.groovy"
       }
     }
