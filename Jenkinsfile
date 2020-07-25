@@ -3,7 +3,7 @@
 pipeline {
   agent any
   parameters {
-        string(name: 'Git_URL, defaultValue: '', description: 'Who should I say hello to?')
+        string(name: 'Git_URL', defaultValue: '', description: 'Who should I say hello to?')
     }
   stages {
     stage('Example') {
