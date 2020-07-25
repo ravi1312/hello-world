@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        sh "echo 'env.giturl="\"${params.Git_URL}"\"'"
+        sh "echo 'env.giturl=\"${params.Git_URL}\"'"
       }
     }
   }
