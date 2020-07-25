@@ -2,13 +2,13 @@
 // Using git without checkout 
 pipeline {
   agent any
+  parameters {
+        string(name: 'Git_URL, defaultValue: '', description: 'Who should I say hello to?')
+    }
   stages {
     stage('Example') {
       steps {
-        load "$WORKSPACE/values.groovy"
-        echo "${env.Git_URL_API}"
-        echo "${env.Git_Token}"
-        sh "git push https://${env.Git_Token}@${env.Git_URL_API}"
+        sh "echo 'env.giturl="${params.Git_URL}"'"
       }
     }
   }
