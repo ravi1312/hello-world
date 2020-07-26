@@ -9,7 +9,7 @@ pipeline {
     stage('Example') {
       steps {
         withAWS(credentials:'something') {
-          sh "aws s3 ls"
+          
           
     // do something
         }
@@ -18,6 +18,7 @@ pipeline {
         sh "ls $WORKSPACE/values.groovy"
         sh "echo 'env.giturl=\"${params.Git_URL}\"' >> $WORKSPACE/values.groovy"
         sh "cat $WORKSPACE/values.groovy"
+        sh "aws s3 ls"
         
       }
     }
