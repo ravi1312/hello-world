@@ -4,12 +4,13 @@ pipeline {
   agent any
   parameters {
         string(name: 'Git_URL', defaultValue: '', description: 'Who should I say hello to?')
+        string(name: 'AWS_CREADS', defaultValue: '', description: 'Who should I say hello to?')
     }
   stages {
     stage('Example') {
       steps {
-        withAWS(credentials:'something') {
-          
+        withAWS(credentials:"${params.AWS_CREADS}") {
+          sh "aws s3 ls"
           
     // do something
         }
@@ -18,7 +19,7 @@ pipeline {
         sh "ls $WORKSPACE/values.groovy"
         sh "echo 'env.giturl=\"${params.Git_URL}\"' >> $WORKSPACE/values.groovy"
         sh "cat $WORKSPACE/values.groovy"
-        sh "aws s3 ls"
+        
         
       }
     }
