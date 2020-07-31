@@ -2,6 +2,9 @@
 // Using git without checkout 
 pipeline {
   agent any
+  triggers {
+    pollSCM 'H/10 * * * *'
+  }
   parameters {
         string(name: 'Git_URL', defaultValue: '', description: 'Who should I say hello to?')
         string(name: 'AWS_CREADS', defaultValue: '', description: 'Who should I say hello to?')
