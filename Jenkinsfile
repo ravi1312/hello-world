@@ -5,7 +5,7 @@ pipeline {
   triggers {
     pollSCM 'H/10 * * * *'
   }
-  parameters {
+  /*parameters {
     //gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
    // listGitBranches(parameterType: 'BRANCH', credentialsId: 'testing-git', remoteURL: 'https://github.com/ravi1312/hello-world.git', name: 'branch')
     gitParameter(branch: '',
@@ -18,7 +18,7 @@ pipeline {
                      sortMode: 'NONE',
                      tagFilter: '*',
                      type: 'PT_BRANCH')
-  }
+  }*/
   stages {
     stage('Example') {
       steps {
