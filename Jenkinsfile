@@ -22,8 +22,9 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'
-        echo "${params.branch}"
+       // echo "git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'"
+        //echo "${params.branch}"
+        echo "test"
       }
     }
   }
